@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>circle and squre</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        .container{
+            height: 500px;
+
+        }
+        .makespam{
+            border-radius: 50%;
+            border: 2px solid black;
+            height: 150px;
+            width: 150px;
+            margin-top: 10px;
+        }
+        .makediv{
+            border: 2px solid black;
+            height: 150px;
+            width: 150px;
+            padding: 10px;
+        }
+
+
+
+    </style>
+   
+</head>
+<body>
+    <div class="container">
+    <!-- <div><select>
+        <option>circle</option>
+        <option>square</option>
+    </select></div> -->
+<button class="btncircle">circle</button> 
+<button class="btnsquare">square</button>
+    </div>
+</body>
+<script>
+let cont=document.querySelector(".container");
+let btncircle=document.querySelector(".btncircle");
+let btnsquare=document.querySelector(".btnsquare")
+
+btncircle.addEventListener('click',function(){
+    let makespam=document.createElement("div");
+    makespam.setAttribute("class","makespam")
+    makespam.classList.add("makespam")
+    cont.appendChild(makespam);
+})
+
+btnsquare.addEventListener('click',()=>{
+    let makediv=document.createElement("div");
+    makediv.setAttribute("class","makediv");
+    makediv.classList.add("makediv");
+    cont.appendChild(makediv);
+})
+
+</script>
+
+</html>
